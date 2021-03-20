@@ -124,6 +124,7 @@ function OutboxList(props) {
 
 OutboxList.propTypes = {
   outbox: PropTypes.array.isRequired,
+  users: PropTypes.array.isRequired,
 };
 
 export default OutboxList;

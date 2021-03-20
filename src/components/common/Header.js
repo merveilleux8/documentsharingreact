@@ -13,6 +13,10 @@ function Header() {
         Outbox
       </NavLink>{" "}
       |{" "}
+      <NavLink to="/inbox" activeStyle={activeStyle}>
+        Inbox
+      </NavLink>{" "}
+      |
       <NavLink to="/about" activeStyle={activeStyle}>
         About
       </NavLink>

@@ -16,9 +16,9 @@ export function sendOutbox(post) {
     method: "POST",
     body: JSON.stringify(post),
     headers: {
-      'Content-type': 'application/json; charset=utf-8',
-      'Accept': 'application/json; charset=utf-8'
-   },
+      "Content-type": "application/json; charset=utf-8",
+      Accept: "application/json; charset=utf-8",
+    },
   };
   debugger;
   return Fetch(outboxUrl, requestOptions);
@@ -31,20 +31,9 @@ export function getOutboxes() {
   return Fetch(outboxUrl, requestOptions);
 }
 
-// export function getCourseBySlug(slug) {
-//   return fetch(baseUrl + "?slug=" + slug)
-//     .then((response) => {
-//       if (!response.ok) throw new Error("Network response was not ok.");
-//       return response.json().then((courses) => {
-//         if (courses.length !== 1) throw new Error("Course not found: " + slug);
-//         return courses[0]; // should only find one course for a given slug, so return it.
-//       });
-//     })
-//     .catch(handleError);
-// }
-
-// export function deleteCourse(courseId) {
-//   return fetch(baseUrl + courseId, { method: "DELETE" })
-//     .then(handleResponse)
-//     .catch(handleError);
-// }
+export function getInboxDetail(refNo) {
+  const requestOptions = {
+    method: "GET",
+  };
+  return Fetch(`${documentUrl}${"/"}${refNo}`, requestOptions);
+}
